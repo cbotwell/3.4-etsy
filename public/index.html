@@ -9,6 +9,25 @@
 </head>
 <body>
 
+<template id="main-template">
+    {{#each this}}
+        {{>article article=this}}
+    {{/each}}
+</template>
+
+<template id="article-partial">
+    <article>
+        <img src="{{ article.images.url_170x135 }}" alt="{{ article.title }}">
+        <h2>
+            {{ article.title }}
+        </h2>
+        <a href="{{ article.shop.url }}">{{ article.shop.shop_name }}</a>
+        <div class="price">
+            ${{ article.price }} USD
+        </div>
+    </article>
+</template>
+
 <script src="jquery/dist/jquery.min.js"></script>
 <script src="handlebars/handlebars.js"></script>
 <script src="load-etsy.js"></script>
