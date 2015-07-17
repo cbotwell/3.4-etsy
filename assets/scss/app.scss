@@ -14,3 +14,182 @@ html {
 }
 
 // Your SASS Journey Starts Here
+
+$border-color: #BFBDBB;
+$border-hover: #5A5552;
+$background-color: #F5F5F1;
+$etsy-orange: #f45800;
+$etsy-blue: #0192B5;
+$etsy-blue-hover: #F0FBFD;
+
+body {
+    background: $background-color;
+}
+
+nav {
+    height: 80px;
+    background: white;
+    border-bottom: 1px solid $border-color;
+    box-shadow: 0px 3px 8px -6px $border-hover;
+    font-family: HelveticaNeue, Helvetica, sans-serif;
+    padding: 0 10%;
+    .outter-container {
+        max-width: 980px;
+        margin: auto;
+    }
+    h1 {
+        float: left;
+        color: $etsy-orange;
+        font-family: serif;
+        font-size: 2em;
+    }
+    a {
+        padding: 10px;
+        color: $etsy-blue;
+        border-radius: 3px;
+        text-decoration: none;
+
+    }
+    a:first-of-type {
+        color: $border-hover;
+        border: 1px solid $border-color;
+        border-radius: 3px;
+
+        span:after {
+            position: relative;
+            top: 13px;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 4px 0 4px;
+            border-color: $border-color transparent transparent transparent;
+        }
+    }
+    a:nth-of-type(2) {
+        color: $etsy-blue;
+        border: 1px solid $etsy-blue;
+        border-radius: 3px;
+    }
+    a:nth-of-type(2):hover {
+        background: $etsy-blue-hover;
+    }
+
+    .search {
+        float: left;
+        border: 1px solid $border-color;
+        border-radius: 3px;
+        input {
+            margin: 0;
+            background: $background-color;
+            padding: 10px;
+            border: none;
+        }
+        button {
+            background: $etsy-blue;
+            color: white;
+            border: none;
+            margin: 0;
+            margin-left: -5px;
+            border-radius: 3px;
+            padding: 10px;
+        }
+        button:hover {
+            background: lighten($etsy-blue, 2%)
+        }
+    }
+    .account {
+        float: right;
+    }
+}
+
+article {
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    max-width: 225px;
+    margin: 5px;
+    font-family: HelveticaNeue, Helvetica, sans-serif;
+    font-size: 0.8em;
+    background: white;
+
+    img {
+        width: 100%;
+    }
+    .top {
+        position: relative;
+    }
+    .wishlist, .favorite {
+        display: none;
+        // opacity: 0;
+        // transition: opacity, 0.5s;
+    }
+    &:hover .wishlist, &:hover .favorite {
+        display: block;
+        // opacity: 1;
+    }
+    .wishlist {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $border-color;
+        background: white;
+        margin: 2px;
+        padding: 2px;
+        border-radius: 2px;
+        border: 1px solid $border-color;
+        .fa:after {
+            position: relative;
+            top: 13px;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 4px 0 4px;
+            border-color: $border-color transparent transparent transparent;
+        }
+    }
+    .wishlist:hover {
+        color: $border-hover;
+        border-color: $border-hover;
+        .fa:after {
+            border-color: $border-hover transparent transparent transparent;
+        }
+    }
+    .favorite{
+        position: absolute;
+        top: 0;
+        right: 30px;
+        color: $border-color;
+        background: white;
+        margin: 2px;
+        padding: 2px;
+        border-radius: 2px;
+        border: 1px solid $border-color;
+    }
+    .favorite:hover {
+        color: $border-hover;
+        border-color: $border-hover;
+        .fa:after {
+            border-color: $border-hover transparent transparent transparent;
+        }
+    }
+
+    .description {
+        padding: 5px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    a:last-of-type {
+        color: $border-color;
+    }
+    a:last-of-type:hover {
+        text-decoration: underline;
+    }
+    .price {
+        color: green;
+        float: right;
+    }
+
+}

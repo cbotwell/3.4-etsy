@@ -8,7 +8,22 @@
     <title>3.4-Etsy</title>
 </head>
 <body>
+<nav>
+    <div class="outter-container">
+        <h1>Etsy</h1>
+        <div class="search">
+            <input type="search" value="nic cage">
+            <button>Search</button>
+        </div>
+        <a href="#"><span>Browse  </span></a>
 
+        <div class="account">
+            <a href="#">Register</a>
+            <a href="#">Sign In</a>
+            <a href="#"><i class="fa fa-shopping-cart"></i>cart</a>
+        </div>
+    </div>
+</nav>
 <div class="content"></div>
 <template id="main-template">
     {{#each results}}
@@ -18,17 +33,27 @@
 
 <template id="article-partial">
     <article>
-        <a href="{{ article.url }}">
-            <img src="{{ article.Images.[0].url_570xN }}" alt="{{ article.title }}"/>
-        </a>
-        <a href="{{ article.url }}">
-            <h2>
-                {{ article.title }}
-            </h2>
-        </a>
-        <a href="{{ article.Shop.url }}">{{ article.Shop.shop_name }}</a>
-        <div class="price">
-            ${{ article.price }} {{ article.currency_code }}
+        <div class="top">
+            <a href="{{ article.url }}">
+                <img src="{{ article.Images.[0].url_570xN }}" alt="{{ article.title }}"/>
+            </a>
+            <div class="wishlist">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="favorite">
+                <i class="fa fa-heart"></i>
+            </div>
+        </div>
+        <div class="description">
+            <a href="{{ article.url }}">
+                <h2>
+                    {{ article.title }}
+                </h2>
+            </a>
+            <a href="{{ article.Shop.url }}">{{ article.Shop.shop_name }}</a>
+            <div class="price">
+                ${{ article.price }} {{ article.currency_code }}
+            </div>
         </div>
     </article>
 </template>
