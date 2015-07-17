@@ -25,7 +25,7 @@ var handlebarsTemplate = registerByQuery('#main-template');
 
 loadEtsy('nic%20cage', function (data) {
     var allArticles = '';
-    debugger;
+
     allArticles = handlebarsTemplate(data);
 
     contentEl.innerHTML = allArticles;
