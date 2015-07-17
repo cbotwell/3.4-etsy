@@ -16,16 +16,16 @@ function registerPartialByQuery (name) {
 
 registerPartialByQuery('article');
 
-Handlebars.registerHelper('my-date', function (dateString) {
-    var d = new Date(dateString);
-    return d.getMonth();
-});
+// Handlebars.registerHelper('my-date', function (dateString) {
+//     var d = new Date(dateString);
+//     return d.getMonth();
+// });
 
 var handlebarsTemplate = registerByQuery('#main-template');
 
-loadData( function (data) {
+loadEtsy('nic%20cage', function (data) {
     var allArticles = '';
-
+    debugger;
     allArticles = handlebarsTemplate(data);
 
     contentEl.innerHTML = allArticles;

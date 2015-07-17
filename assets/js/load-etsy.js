@@ -3,7 +3,7 @@ var loadEtsy = function (query, onload, immediate) {
     var apiKey = 'ki0carhy6hn0ldkouxbju1wq';
     var url = 'https://api.etsy.com/v2/listings/active.js?api_key=' +
         apiKey +
-        '&keywords=nic%20cage' +
+        '&keywords=' +
         query +
         '&includes=Images,Shop&sort_on=score';
 
@@ -14,5 +14,7 @@ var loadEtsy = function (query, onload, immediate) {
         success: onload
     });
 
+    if (immediate) {
     immediate();
+    }
 };
