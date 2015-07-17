@@ -18,13 +18,17 @@
 
 <template id="article-partial">
     <article>
-        <img src="{{ article.images.url_170x135 }}" alt="{{ article.title }}">
-        <h2>
-            {{ article.title }}
-        </h2>
-        <a href="{{ article.shop.url }}">{{ article.shop.shop_name }}</a>
+        <a href="{{ article.url }}">
+            <img src="{{ article.Images.[0].url_570xN }}" alt="{{ article.title }}"/>
+        </a>
+        <a href="{{ article.url }}">
+            <h2>
+                {{ article.title }}
+            </h2>
+        </a>
+        <a href="{{ article.Shop.url }}">{{ article.Shop.shop_name }}</a>
         <div class="price">
-            ${{ article.price }} USD
+            ${{ article.price }} {{ article.currency_code }}
         </div>
     </article>
 </template>
