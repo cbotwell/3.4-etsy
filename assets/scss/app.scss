@@ -26,17 +26,26 @@ body {
     background: $background-color;
 }
 
+.outter-container {
+    @include outer-container(980px);
+    margin: auto;
+}
+.sidebar {
+    @include span-columns(3);
+}
+.content {
+    @include span-columns(9);
+    @include omega();
+    @include shift(4);
+}
 nav {
+    position: relative;
     height: 80px;
     background: white;
     border-bottom: 1px solid $border-color;
     box-shadow: 0px 3px 8px -6px $border-hover;
     font-family: HelveticaNeue, Helvetica, sans-serif;
     padding: 0 10%;
-    .outter-container {
-        max-width: 980px;
-        margin: auto;
-    }
     h1 {
         float: left;
         color: $etsy-orange;
@@ -50,7 +59,7 @@ nav {
         text-decoration: none;
 
     }
-    a:first-of-type {
+    a:nth-of-type(1) {
         color: $border-hover;
         border: 1px solid $border-color;
         border-radius: 3px;
@@ -66,15 +75,9 @@ nav {
             border-color: $border-color transparent transparent transparent;
         }
     }
-    a:nth-of-type(2) {
-        color: $etsy-blue;
-        border: 1px solid $etsy-blue;
-        border-radius: 3px;
+    a:nth-of-type(1):hover {
+        border-color: $border-hover;
     }
-    a:nth-of-type(2):hover {
-        background: $etsy-blue-hover;
-    }
-
     .search {
         float: left;
         border: 1px solid $border-color;
@@ -100,10 +103,25 @@ nav {
     }
     .account {
         float: right;
+        a {
+            color: $etsy-blue;
+            border: none;
+        }
+        a:nth-of-type(2) {
+            border-radius: 3px;
+            border: 1px solid $etsy-blue;
+        }
+        a:nth-of-type(2):hover {
+            background: $etsy-blue-hover;
+        }
+        a:last-of-type {
+            color: $border-hover;
+        }
     }
 }
-
 article {
+    @include span-columns(4);
+    @include omega(3n);
     border: 1px solid $border-color;
     border-radius: 3px;
     max-width: 225px;
@@ -120,12 +138,9 @@ article {
     }
     .wishlist, .favorite {
         display: none;
-        // opacity: 0;
-        // transition: opacity, 0.5s;
     }
     &:hover .wishlist, &:hover .favorite {
         display: block;
-        // opacity: 1;
     }
     .wishlist {
         position: absolute;
@@ -139,7 +154,7 @@ article {
         border: 1px solid $border-color;
         .fa:after {
             position: relative;
-            top: 13px;
+            top: 12px;
             content: "";
             width: 0;
             height: 0;
