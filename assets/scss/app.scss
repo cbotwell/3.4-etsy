@@ -61,6 +61,7 @@ nav {
         font-size: 2em;
     }
     a {
+        vertical-align: middle;
         padding: 10px;
         color: $etsy-blue;
         border-radius: 3px;
@@ -157,7 +158,7 @@ article {
         color: $border-color;
         background: white;
         margin: 2px;
-        padding: 2px;
+        padding: 3px;
         border-radius: 2px;
         border: 1px solid $border-color;
         .fa:after {
@@ -181,11 +182,11 @@ article {
     .favorite{
         position: absolute;
         top: 0;
-        right: 30px;
+        right: 29px;
         color: $border-color;
         background: white;
         margin: 2px;
-        padding: 2px;
+        padding: 3px;
         border-radius: 2px;
         border: 1px solid $border-color;
     }
