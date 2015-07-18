@@ -1870,7 +1870,8 @@ body {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 23.23176%; }
+  width: 23.23176%;
+  font-family: HelveticaNeue, Helvetica, sans-serif; }
   .sidebar:last-child {
     margin-right: 0; }
 
@@ -1891,7 +1892,7 @@ nav {
   border-bottom: 1px solid #BFBDBB;
   box-shadow: 0px 3px 8px -6px #5A5552;
   font-family: HelveticaNeue, Helvetica, sans-serif;
-  padding: 0 10%;
+  padding: 0 5%;
   margin-bottom: 50px; }
   nav .outter-container {
     width: 100%;
@@ -1972,6 +1973,30 @@ nav {
     nav .account a:last-of-type {
       margin-left: 1rem;
       color: #5A5552; }
+
+.sidebar {
+  font-size: 0.8em; }
+  .sidebar p {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #5A5552; }
+  .sidebar .bar {
+    background: white;
+    border: 1px solid #BFBDBB;
+    border-radius: 3px;
+    padding: 12px; }
+    .sidebar .bar li {
+      margin-bottom: 10px;
+      color: #5A5552;
+      font-weight: bold; }
+    .sidebar .bar li a {
+      font-weight: normal;
+      text-decoration: none;
+      color: #0192B5; }
+    .sidebar .bar li a:hover {
+      text-decoration: underline; }
+    .sidebar .bar ul ul {
+      margin: 10px 0 0 20px; }
 
 article {
   float: left;
