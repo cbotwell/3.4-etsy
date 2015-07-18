@@ -34,12 +34,13 @@ body {
 }
 .sidebar {
     @include span-columns(3);
+    @include row();
     font-family: $body-fonts;
 }
 .content {
     @include span-columns(9);
     @include omega();
-    @include shift(4);
+    @include row();
 }
 nav {
     position: relative;
