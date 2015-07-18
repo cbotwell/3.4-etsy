@@ -50,15 +50,14 @@ nav {
 
     .outter-container {
         width: 100%;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        padding: 20px 0;
     }
     h1 {
         float: left;
         color: $etsy-orange;
         font-family: serif;
-        font-size: 2em;
+        font-size: 2.5em;
+        margin-right: 1rem;
     }
     a {
         vertical-align: middle;
@@ -72,10 +71,13 @@ nav {
         color: $border-hover;
         border: 1px solid $border-color;
         border-radius: 3px;
+        float: left;
 
         span:after {
+            float: right;
             position: relative;
-            top: 13px;
+            top: 6px;
+            right: -5px;
             content: "";
             width: 0;
             height: 0;
@@ -89,34 +91,52 @@ nav {
     }
     .search {
         float: left;
-        border: 1px solid $border-color;
-        border-radius: 3px;
+        margin-right: 1rem;
+
         input {
             margin: 0;
             background: $background-color;
             padding: 10px;
-            border: none;
+            border: 1px solid $border-color;
+            border-radius: 3px;
+            font-size: 1em;
+        }
+        input:hover {
+            border-color: $border-hover;
+        }
+        input:focus {
+            border-color: $etsy-blue;
+            background: white;
+            outline: none;
         }
         button {
             background: $etsy-blue;
             color: white;
-            border: none;
+            font-weight: bold;
+            border: 1px solid darken($etsy-blue, 5%);
             margin: 0;
-            margin-left: -5px;
-            border-radius: 3px;
+            margin-left: -7px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
             padding: 10px;
+            font-size: 1em;
         }
         button:hover {
             background: lighten($etsy-blue, 2%)
+        }
+        button:focus {
+            outline: none;
         }
     }
     .account {
         float: right;
         a {
+            float: left;
             color: $etsy-blue;
             border: none;
         }
         a:nth-of-type(2) {
+            margin-left: 1rem;
             border-radius: 3px;
             border: 1px solid $etsy-blue;
         }
@@ -124,6 +144,7 @@ nav {
             background: $etsy-blue-hover;
         }
         a:last-of-type {
+            margin-left: 1rem;
             color: $border-hover;
         }
     }
