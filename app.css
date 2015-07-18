@@ -1895,15 +1895,15 @@ nav {
   margin-bottom: 50px; }
   nav .outter-container {
     width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); }
+    padding: 20px 0; }
   nav h1 {
     float: left;
     color: #f45800;
     font-family: serif;
-    font-size: 2em; }
+    font-size: 2.5em;
+    margin-right: 1rem; }
   nav a {
+    vertical-align: middle;
     padding: 10px;
     color: #0192B5;
     border-radius: 3px;
@@ -1911,10 +1911,13 @@ nav {
   nav a:nth-of-type(1) {
     color: #5A5552;
     border: 1px solid #BFBDBB;
-    border-radius: 3px; }
+    border-radius: 3px;
+    float: left; }
     nav a:nth-of-type(1) span:after {
+      float: right;
       position: relative;
-      top: 13px;
+      top: 6px;
+      right: -5px;
       content: "";
       width: 0;
       height: 0;
@@ -1925,34 +1928,49 @@ nav {
     border-color: #5A5552; }
   nav .search {
     float: left;
-    border: 1px solid #BFBDBB;
-    border-radius: 3px; }
+    margin-right: 1rem; }
     nav .search input {
       margin: 0;
       background: #F5F5F1;
       padding: 10px;
-      border: none; }
+      border: 1px solid #BFBDBB;
+      border-radius: 3px;
+      font-size: 1em; }
+    nav .search input:hover {
+      border-color: #5A5552; }
+    nav .search input:focus {
+      border-color: #0192B5;
+      background: white;
+      outline: none; }
     nav .search button {
       background: #0192B5;
       color: white;
-      border: none;
+      font-weight: bold;
+      border: 1px solid #017e9c;
       margin: 0;
-      margin-left: -5px;
-      border-radius: 3px;
-      padding: 10px; }
+      margin-left: -7px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      padding: 10px;
+      font-size: 1em; }
     nav .search button:hover {
       background: #019abf; }
+    nav .search button:focus {
+      outline: none; }
   nav .account {
     float: right; }
     nav .account a {
+      float: left;
       color: #0192B5;
       border: none; }
     nav .account a:nth-of-type(2) {
+      margin-left: 1rem;
       border-radius: 3px;
       border: 1px solid #0192B5; }
     nav .account a:nth-of-type(2):hover {
       background: #F0FBFD; }
     nav .account a:last-of-type {
+      margin-left: 1rem;
       color: #5A5552; }
 
 article {
@@ -1988,7 +2006,7 @@ article {
     color: #BFBDBB;
     background: white;
     margin: 2px;
-    padding: 2px;
+    padding: 3px;
     border-radius: 2px;
     border: 1px solid #BFBDBB; }
     article .wishlist .fa:after {
@@ -2008,11 +2026,11 @@ article {
   article .favorite {
     position: absolute;
     top: 0;
-    right: 30px;
+    right: 29px;
     color: #BFBDBB;
     background: white;
     margin: 2px;
-    padding: 2px;
+    padding: 3px;
     border-radius: 2px;
     border: 1px solid #BFBDBB; }
   article .favorite:hover {
