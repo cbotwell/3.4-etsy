@@ -147,8 +147,38 @@
         </div>
 
     </div>
-    <div class="content"></div>
+    <div class="listings">
+        <p class="list-cat"><a href="#">All Categories</a> > <span>"nic cage"</span> (97 Results)</p>
+        <p class="list-sort">Sort By: <a href="#">Relevancy </a></p>
+        <div class="content"></div>
+
+        <div class="pagination">
+            <p>Related to <span>nic cage</span></p>
+            <a href="#">Nicolas Cage</a>
+            <ul>
+                <li><</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>></li>
+            </ul>
+        </div>
+    </div>
 </div>
+<footer>
+    <div class="outter-container">
+    <div class="subscribe">
+        <p>
+            Get top trends and fresh editors' picks in your inbox with Etsy Finds.
+        </p>
+        <form>
+            <input type="text" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </form>
+
+    </div>
+    </div>
+</footer>
 <template id="main-template">
     {{#each results}}
         {{>article article=this}}
