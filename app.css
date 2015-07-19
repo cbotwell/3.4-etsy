@@ -2091,7 +2091,7 @@ nav {
     border-color: #BFBDBB transparent transparent transparent; }
 
 article {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -2179,7 +2179,8 @@ article {
   margin-left: 25.58941%;
   clear: both;
   font-family: HelveticaNeue, Helvetica, sans-serif;
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  margin-bottom: 25px; }
   .pagination:last-child {
     margin-right: 0; }
   .pagination p {
@@ -2247,7 +2248,8 @@ footer {
     footer .subscribe button:focus {
       outline: none; }
   footer .footer-links {
-    margin-left: 17.05961%;
+    overflow: auto;
+    margin: 50px 0;
     font-family: HelveticaNeue, Helvetica, sans-serif;
     font-size: 0.8em; }
     footer .footer-links button {
@@ -2257,16 +2259,14 @@ footer {
       color: white;
       border: 1px solid #017e9c; }
     footer .footer-links ul {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 14.70196%; }
-      footer .footer-links ul:last-child {
-        margin-right: 0; }
+      width: 20%;
+      float: left; }
     footer .footer-links li {
       margin: 10px 0; }
   footer .bottom {
     clear: both;
+    overflow: auto;
+    padding: 20px 0;
     border-top: 1px solid #BFBDBB;
     color: #5A5552;
     font-size: 0.8em; }
