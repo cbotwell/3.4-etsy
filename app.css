@@ -2288,9 +2288,7 @@ footer {
       text-align: center; }
       footer .bottom ul:first-of-type li {
         float: left;
-        padding: 10px;
-        height: 100% i;
-          height-font-size: 1.5em; }
+        padding: 10px; }
       footer .bottom ul:first-of-type li:nth-of-type(2) {
         border-right: 1px solid #BFBDBB;
         border-left: 1px solid #BFBDBB; }
