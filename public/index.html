@@ -46,7 +46,105 @@
             </ul>
         </div>
         <p>Refine your search</p>
-        <div class="bar"></div>
+        <div class="bar">
+            <form>
+                <div class="section">
+                    <p>Item Type</p>
+                    <ul>
+                    <li>
+                        <label>
+                            <input type="radio" checked="checked">
+                            <a href="#">All Items</a>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio">
+                            <a href="#">Handmade</a>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio">
+                            <a href="#">Vintage</a>
+                        </label>
+                    </li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <p>Price</p>
+                    <div class="price">
+                        <div class="input-box">
+                            <span>$</span>
+                            <input type="text" placeholder="Low">
+                        </div>
+                        <p>to</p>
+                        <div class="input-box">
+                            <span>$</span>
+                            <input type="text" placeholder="High">
+                        </div>
+                        <div class="submit">
+                            <i class="fa fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <p>Filter by Color</p>
+                    <ul class="colors">
+                        <li class="red"></li>
+                        <li class="orange"></li>
+                        <li class="yellow"></li>
+                        <li class="green"></li>
+                        <li class="blue"></li>
+                        <li class="purple"></li>
+                        <li class="black"></li>
+                        <li class="white"></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <p>Ordering Option</p>
+                    <ul>
+                        <li>
+                            <input type="checkbox">
+                            <a href="#">In Your Favorites</a>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <a href="#">Accepts Etys Gift Cards</a>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <a href="#">Customizable</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <p>Shop Location</p>
+                    <ul>
+                    <li>
+                        <label>
+                            <input type="radio" checked="checked">
+                            <a href="#">Anywhere</a>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio">
+                            <a href="#">United States</a>
+                        </label>
+                    </li>
+                    <li>
+                        <a href="#">Choose a custom location</a>
+                    </li>
+                </div>
+                <div class="section">
+                    <p>Ship To</p>
+                    <select name="ship-to" id="ship-to">
+                        <option value="US" selected="selected">United States</option>
+                    </select>
+                </div>
+            </form>
+        </div>
 
     </div>
     <div class="content"></div>
@@ -61,7 +159,9 @@
     <article>
         <div class="top">
             <a href="{{ article.url }}">
-                <img src="{{ article.Images.[0].url_570xN }}" alt="{{ article.title }}"/>
+                <div class="crop">
+                    <img src="{{ article.Images.[0].url_570xN }}" alt="{{ article.title }}"/>
+                </div>
             </a>
             <div class="wishlist">
                 <i class="fa fa-bars"></i>

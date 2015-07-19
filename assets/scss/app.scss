@@ -34,23 +34,21 @@ body {
 }
 .sidebar {
     @include span-columns(3);
-    @include row();
     font-family: $body-fonts;
 }
 .content {
     @include span-columns(9);
     @include omega();
-    @include row();
 }
 nav {
     position: relative;
     height: 80px;
     background: white;
     border-bottom: 1px solid $border-color;
-    box-shadow: 0px 3px 8px -6px $border-hover;
+    box-shadow: 0px 3px 8px -7px $border-hover;
     font-family: $body-fonts;
     padding: 0 5%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     .outter-container {
         width: 100%;
@@ -165,6 +163,7 @@ nav {
         border: 1px solid $border-color;
         border-radius: 3px;
         padding: 12px;
+        margin-bottom: 30px;
         li {
             margin-bottom: 10px;
             color: $border-hover;
@@ -180,6 +179,89 @@ nav {
         }
         ul ul {
             margin: 10px 0 0 20px;
+        }
+        form .section {
+            padding: 5px 0;
+            border-bottom: 1px solid $border-color;
+        }
+        form .section:first-of-type {
+            padding-top: 0;
+        }
+    }
+    .price {
+        overflow: auto;
+        p {
+            float: left;
+            vertical-align: middle;
+            padding: 0 10px;
+        }
+        .input-box {
+            float: left;
+            width: 30%;
+            border: 1px solid $border-color;
+            border-radius: 3px;
+            padding: 5px;
+            span {
+                width: 10%;
+            }
+            input {
+                border: none;
+                width: 70%;
+            }
+        }
+        .submit {
+            float: right;
+            border: 1px solid $border-color;
+            border-radius: 3px;
+            padding: 5px 5px 5px 5px;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+        }
+    }
+    .colors {
+        overflow: auto;
+        margin: 10px 0;
+        li {
+            float: left;
+            width: 10%;
+            height: 20px;
+            background: $border-hover;
+            border-radius: 3px;
+            margin: 0 2px;
+
+        }
+        .red {
+            background: red;
+        }
+        .orange {
+            background: orange;
+        }
+        .yellow {
+            background: yellow;
+        }
+        .green {
+            background: green;
+        }
+        .blue {
+            background: blue;
+        }
+        .purple {
+            background: purple;
+        }
+        .black {
+            background: black;
+        }
+        .white {
+            background: white;
+            border: 1px solid $border-color;
+        }
+    }
+    #ship-to {
+        width: 100%;
+        margin: 0 0 10px 0;
+        select {
+            padding: 5px;
         }
     }
 }
