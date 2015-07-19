@@ -1,6 +1,6 @@
 var loadEtsy = function (query, onload, immediate) {
     var oReq = new XMLHttpRequest();
-    var apiKey = 'ki0carhy6hn0ldkouxbju1wq';
+    var apiKey = 'aaedcft912egspe8gzjoqi4d';
     var url = 'https://api.etsy.com/v2/listings/active.js?api_key=' +
         apiKey +
         '&keywords=' +
