@@ -2091,13 +2091,13 @@ nav {
     border-color: #BFBDBB transparent transparent transparent; }
 
 article {
+  margin-bottom: 20px;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
   border: 1px solid #BFBDBB;
   border-radius: 3px;
-  margin: 0 5px 5px 5px;
   font-size: 0.8em;
   background: white; }
   article:last-child {
@@ -2215,6 +2215,9 @@ article {
 
 footer {
   border-top: 1px solid #BFBDBB; }
+  footer a {
+    text-decoration: none;
+    color: #0192B5; }
   footer .subscribe {
     margin: 50px 0;
     padding: 25px;
@@ -2243,3 +2246,74 @@ footer {
       background: #019abf; }
     footer .subscribe button:focus {
       outline: none; }
+  footer .footer-links {
+    margin-left: 17.05961%;
+    font-family: HelveticaNeue, Helvetica, sans-serif;
+    font-size: 0.8em; }
+    footer .footer-links button {
+      padding: 5px;
+      background: #0192B5;
+      border-radius: 3px;
+      color: white;
+      border: 1px solid #017e9c; }
+    footer .footer-links ul {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%; }
+      footer .footer-links ul:last-child {
+        margin-right: 0; }
+    footer .footer-links li {
+      margin: 10px 0; }
+  footer .bottom {
+    clear: both;
+    border-top: 1px solid #BFBDBB;
+    color: #5A5552;
+    font-size: 0.8em; }
+    footer .bottom .center {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-left: 25.58941%; }
+      footer .bottom .center:last-child {
+        margin-right: 0; }
+    footer .bottom ul:first-of-type {
+      float: left;
+      width: 55%;
+      overflow: auto;
+      margin: 20px 0;
+      border: 1px solid #BFBDBB;
+      border-radius: 3px;
+      text-align: center; }
+      footer .bottom ul:first-of-type li {
+        float: left;
+        padding: 10px;
+        height: 100% i;
+          height-font-size: 1.5em; }
+      footer .bottom ul:first-of-type li:nth-of-type(2) {
+        border-right: 1px solid #BFBDBB;
+        border-left: 1px solid #BFBDBB; }
+      footer .bottom ul:first-of-type li:hover {
+        color: #0192B5;
+        background: #F0FBFD; }
+    footer .bottom button {
+      float: right;
+      margin: 20px 0;
+      width: 150px;
+      padding: 5px;
+      border-radius: 3px;
+      border: 1px solid #BFBDBB;
+      background: none;
+      color: #5A5552;
+      font-weight: bold;
+      font-size: 1em; }
+    footer .bottom button:hover {
+      background: #e4e3e2; }
+    footer .bottom ul:last-of-type {
+      clear: both;
+      margin: 20px 0;
+      margin-bottom: 50px; }
+      footer .bottom ul:last-of-type li {
+        float: left;
+        margin-right: 20px; }
