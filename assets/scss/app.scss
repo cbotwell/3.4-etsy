@@ -300,7 +300,7 @@ nav {
     }
 }
 article {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     @include span-columns(4);
     @include omega(3n);
     border: 1px solid $border-color;
@@ -397,6 +397,7 @@ article {
     clear: both;
     font-family: $body-fonts;
     font-size: 0.9em;
+    margin-bottom: 25px;
     p {
         margin: 10px 0;
     }
@@ -483,7 +484,8 @@ footer {
         }
     }
     .footer-links {
-        @include shift(2);
+        overflow: auto;
+        margin: 50px 0;
         font-family: $body-fonts;
         font-size: 0.8em;
         button {
@@ -494,7 +496,8 @@ footer {
             border: 1px solid darken($etsy-blue, 5%);
         }
         ul {
-            @include span-columns(2);
+            width: 20%;
+            float: left;
         }
         li {
             margin: 10px 0;
@@ -502,6 +505,8 @@ footer {
     }
     .bottom {
         clear: both;
+        overflow: auto;
+        padding: 20px 0;
         border-top: 1px solid $border-color;
         color: $border-hover;
         font-size: 0.8em;
