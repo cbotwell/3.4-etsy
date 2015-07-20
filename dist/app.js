@@ -23,10 +23,14 @@ registerPartialByQuery('article');
 
 var handlebarsTemplate = registerByQuery('#main-template');
 
+immediate = function () {
+    contentEl.innerHTML = '<i class="fa fa-refresh fa-spin"></i>';
+
+};
+
 loadEtsy('nic%20cage', function (data) {
     var allArticles = '';
 
     allArticles = handlebarsTemplate(data);
-
     contentEl.innerHTML = allArticles;
-});
+}, immediate);

@@ -2107,9 +2107,21 @@ article {
   article:nth-child(3n+1) {
     clear: left; }
   article img {
-    width: 100%; }
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%; }
   article .top {
-    position: relative; }
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden; }
+  article .top:before {
+    content: "";
+    display: block;
+    padding-top: 65%; }
   article .wishlist, article .favorite {
     display: none; }
   article:hover .wishlist, article:hover .favorite {
@@ -2315,3 +2327,9 @@ footer {
       footer .bottom ul:last-of-type li {
         float: left;
         margin-right: 20px; }
+
+.fa-refresh {
+  text-align: center;
+  font-size: 2em;
+  color: #BFBDBB;
+  margin: 15% 50%; }
