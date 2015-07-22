@@ -34,3 +34,17 @@ loadEtsy('nic%20cage', function (data) {
     allArticles = handlebarsTemplate(data);
     contentEl.innerHTML = allArticles;
 }, immediate);
+
+var buttonEl = document.querySelector('nav button');
+var inputEl = document.querySelector('input');
+
+buttonEl.onclick = function() {
+    if (inputEl.value !== 'nic cage') {
+        loadEtsy(inputEl.value, function(data) {
+            var allArticles = '';
+
+            allArticles = handlebarsTemplate(data);
+            contentEl.innerHTML = allArticles;
+        }, immediate);
+    }
+};
