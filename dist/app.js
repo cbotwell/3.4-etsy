@@ -16,10 +16,6 @@ function registerPartialByQuery (name) {
 
 registerPartialByQuery('article');
 
-// Handlebars.registerHelper('my-date', function (dateString) {
-//     var d = new Date(dateString);
-//     return d.getMonth();
-// });
 
 var handlebarsTemplate = registerByQuery('#main-template');
 
@@ -35,16 +31,6 @@ loadEtsy('nic%20cage', function (data) {
     contentEl.innerHTML = allArticles;
 }, immediate);
 
-var buttonEl = document.querySelector('nav button');
-var inputEl = document.querySelector('input');
+var inputEl = document.querySelector('.search input');
+var inputValue = inputEl.value;
 
-buttonEl.onclick = function() {
-    if (inputEl.value !== 'nic cage') {
-        loadEtsy(inputEl.value, function(data) {
-            var allArticles = '';
-
-            allArticles = handlebarsTemplate(data);
-            contentEl.innerHTML = allArticles;
-        }, immediate);
-    }
-};

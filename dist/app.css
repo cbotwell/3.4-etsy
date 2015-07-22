@@ -1998,11 +1998,13 @@ nav {
       text-decoration: underline; }
     .sidebar .bar ul ul {
       margin: 10px 0 0 20px; }
-    .sidebar .bar form .section {
+    .sidebar .bar .section {
       padding: 5px 0;
       border-bottom: 1px solid #BFBDBB; }
-    .sidebar .bar form .section:first-of-type {
+    .sidebar .bar .section:first-of-type {
       padding-top: 0; }
+    .sidebar .bar .section:last-of-type {
+      border: none; }
   .sidebar .price {
     overflow: auto; }
     .sidebar .price p {
