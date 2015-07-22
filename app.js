@@ -32,5 +32,22 @@ loadEtsy('nic%20cage', function (data) {
 }, immediate);
 
 var inputEl = document.querySelector('.search input');
-var inputValue = inputEl.value;
+var searchButtonEl = document.querySelector('.search-button');
+var searchTermEl = document.querySelector('.list-cat span');
+var relatedTermEl = document.querySelector('.pagination span');
+
+searchButtonEl.onclick = function () {
+    var inputValue = inputEl.value;
+
+    loadEtsy(inputValue, function (data) {
+        var allArticles = '';
+
+        allArticles = handlebarsTemplate(data);
+        contentEl.innerHTML = allArticles;
+    }, immediate);
+
+    searchTermEl.innerHTML = inputValue;
+    relatedTermEl.innerHTML = inputValue;
+};
+
 
